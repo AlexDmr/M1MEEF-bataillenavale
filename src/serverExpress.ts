@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { CreateServer } from './apiBatailleNavale';
+import { CreateServerBataille } from './apiBatailleNavale';
 import cors from "cors"
 
 const app = express();
@@ -20,7 +20,7 @@ const port = 8081;
 });
 */
 
-CreateServer(app);
+CreateServerBataille(app);
 
 app.post("/api/login", (req, res) => {
     console.log("On reoit une demnde d'identification...")
